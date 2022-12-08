@@ -17,18 +17,6 @@ body {
   position: relative;
 }
 
-header {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  position: absolute;
-  right: 27.9%;
-}
-
-header h1 {
-  font-size: 0.9rem;
-  font-weight: 600;
-}
 
 /* left */
 #left .text {
@@ -59,11 +47,34 @@ header h1 {
 }
 
 /* right */
+header {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  user-select: none;
+  pointer-events: none;
+}
+
+header h1 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 #right {
+  display: flex;
+  align-items: center;
   flex: 54%;
 }
 
-/* #title p {
+#content {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+#title p {
   font-family: 'Space Grotesk';
 }
 
@@ -71,87 +82,95 @@ header h1 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  position: absolute;
-  bottom: 30%;
-  right: 12%;
 }
-
-#register form {
+  
+#form form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-#register form input::placeholder {
+#form form input {
+  width: 22rem;
+  height: 2.5rem;
   color: #000000;
-}
-
-#register form input {
+  font-size: 0.95rem;
+  letter-spacing: 0.02rem;
   border: none;
   border-bottom: #E0E0E0 solid 1px;
-  height: 2.5rem;
-  width: 22rem;
 }
 
-#register form input:focus {
+#form form input::placeholder {
+  color: #000000;
+  font-size: 0.95rem;
+  letter-spacing: 0.02rem;
+}
+
+#form input:focus {
   outline: none;
 }
 
-#register form input[type="submit"] {
+/* buttons */
+
+#buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#buttons button {
   border-radius: 5px;
+  width: 22rem;
   cursor: pointer;
   height: 2.9rem;
   background-color: #060606;
   color: #FFFF;
 }
 
-.breakroll {
+#buttons .breakroll {
   display: flex;
   align-items: center;
 }
 
-.breakroll span {
+#buttons .breakroll span {
   text-align: center;
   color: #7A7A7A;
   width: 1.3rem;
 }
 
-.line {
+#buttons .line {
   background-color: #E0E0E0;
   width: 10.348rem;
   height: 1px;
-}
-
-#google-sign a {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  height: 2.9rem;
-  width: 22rem;
-  color: #000000;
-  border: #E0E0E0 solid 1px;
-  border-radius: 5px;
 }
 
 #google-sign a img {
   width: 1.2rem;
 }
 
-#buttons {
+#google-sign a {
+  width: 22rem;
+  height: 2.9rem;
   display: flex;
-  flex-direction: column;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000000;
+  border: #E0E0E0 solid 1px;
+  border-radius: 5px;
 }
 
 /* log in */
-/* #login {
-  font-family: 'Space Grotesk';
-  position: absolute;
+#login {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 0.5rem;
-  right: 20%;
-  bottom: 10%;
-} */
+  font-family: 'Space Grotesk';
+} 
+
+#login a {
+  color: #000000;
+  font-weight: 500;
+}
